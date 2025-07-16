@@ -5,6 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface MediaRepository {
     fun getAlbumsFlow(): Flow<List<Media>>
-
     fun getMedia(bucketId: Long, mediaType: Int): Flow<List<Media>>
 }

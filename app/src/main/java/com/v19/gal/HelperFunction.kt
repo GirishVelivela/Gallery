@@ -28,3 +28,14 @@ fun hasMediaPermissions(context: Context): Boolean {
         ) == PackageManager.PERMISSION_GRANTED
     }
 }
+
+fun scheduleMediaSyncWorker(context: Context) {
+    Log.d("MediaSyncWorker", "scheduleMediaSyncWorker")
+    val request = OneTimeWorkRequestBuilder<MediaSyncWorker>()
+        .build()
+    WorkManager.getInstance(context).enqueueUniqueWork(
+        "on_launch_media_sync",
+        ExistingWorkPolicy.KEEP, // prevent duplicate launches
+        request
+    )
+}

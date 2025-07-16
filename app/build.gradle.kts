@@ -57,6 +57,9 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.paging)
 
+    implementation(libs.coil.video) // or latest version
+    implementation(libs.coil.compose)
+
     implementation(libs.androidx.runtime.livedata)
     implementation(libs.androidx.work.runtime.ktx)
 

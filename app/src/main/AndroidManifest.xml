@@ -29,6 +29,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".albumcontent.ui.AlbumContentActivity"
+            android:exported="true"
+            android:theme="@style/Theme.GalTest" />
     </application>
 
 </manifest>

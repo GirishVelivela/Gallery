@@ -53,6 +53,7 @@ import androidx.work.WorkManager
 import coil.compose.AsyncImage
 import com.v19.gal.R
 import com.v19.gal.album.viewmodel.AlbumViewModel
+import com.v19.gal.albumcontent.ui.AlbumContentActivity
 import com.v19.gal.data.local.AppDatabase
 import com.v19.gal.data.model.Media
 import com.v19.gal.data.repo.impl.MediaRepositoryImpl
@@ -194,6 +195,11 @@ fun AlbumGridItem(album: Media) {
             .fillMaxWidth()
             .clip(RoundedCornerShape(16.dp))
             .clickable {
+                context.startActivity(
+                    Intent(
+                        context, AlbumContentActivity::class.java
+                    ).putExtra("bucket_id", album.albumId).putExtra("media_type", album.type)
+                )
             }) {
 
         val thumbnailState = remember { mutableStateOf<Bitmap?>(null) }

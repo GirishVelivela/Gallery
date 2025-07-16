@@ -34,6 +34,11 @@
             android:name=".albumcontent.ui.AlbumContentActivity"
             android:exported="true"
             android:theme="@style/Theme.GalTest" />
+
+        <activity
+            android:name=".ui.activity.MediaActivity"
+            android:exported="true"
+            android:theme="@style/Theme.GalTest" />
     </application>
 
 </manifest>

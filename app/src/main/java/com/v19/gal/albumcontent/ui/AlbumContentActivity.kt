@@ -1,6 +1,7 @@
 package com.v19.gal.albumcontent.ui
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Bitmap
 import android.media.ThumbnailUtils
 import android.os.Bundle
@@ -45,6 +46,7 @@ import com.v19.gal.hasMediaPermissions
 import com.v19.gal.scheduleMediaSyncWorker
 import com.v19.gal.sync.MediaObserver
 import com.v19.gal.sync.ObserverCallback
+import com.v19.gal.ui.activity.MediaActivity
 import com.v19.gal.ui.theme.GalTestTheme
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.launchIn
@@ -161,6 +163,14 @@ fun AlbumContentGridItem(media: Media) {
             .aspectRatio(1f) // Square grid item
             .clip(RoundedCornerShape(16.dp))
             .clickable {
+                if (hasMediaPermissions(context)) {
+                    context.startActivity(
+                        Intent(context, MediaActivity::class.java).putExtra(
+                            "media",
+                            media
+                        )
+                    )
+                }
             }
     )
 }

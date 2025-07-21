@@ -1,35 +1,39 @@
-# Gallery
-Gallery
+📸 Custom Android Gallery App
+This is a lightweight, user-friendly Gallery app designed to display both images and videos from local device storage in a unified album view, grouped by folder names.
 
-1. Custom Android Gallery App
+🔹 Key Features
+📂 Album View by Folder
+Automatically organizes media into albums based on device folder names.
 
-This is a Custom Gallery App built using Kotlin and Jetpack Compose, designed to display all media (images & videos) on a user's device grouped by folder/album view.
-It includes special albums like "All Photos", "All Videos", and "Camera".
+🖼️🎞️ Unified Media Display
+Images and videos appear together in the same album screen.
 
----
+🔄 Auto Sync Using WorkManager
+Efficient and modern background syncing ensures newly added media is detected.
 
-## Features
+⚡ Optimized for Latest Android Versions
+Supports scoped storage, media access permissions, and efficient media querying.
 
-- Shows media grouped by folder names
-- Displays All Photos and All Videos from the device, excluding cache or system folders
-- Shows a Camera album with all pictures/videos from the `DCIM/Camera` directory
-- Displays number of media files in each album
-- Clicking an album shows full-screen grid view of media files in that folder
-- Smooth UI using Jetpack Compose with lazy grids and Coil image loading
+🧭 Clean Navigation
+Tap on any album to explore its contents seamlessly.
 
-- commits
-- Data Layer creation
-- Data Synch from ADO provider to local DB - WorkerManager
-- Album  Screen changes
-- Album media details screen
-- Media details screen - final
+📦 Installation
+Download the Gallery.apk to your Android device.
+Allow installation from unknown sources if prompted.
+Open the app and grant media permissions to begin browsing your albums.
 
----
- Tech Stack
-- Kotlin
-- Jetpack Compose
-- MediaStore API
-- Coil for image loading
-- MVVM architecture
-- Navigation Compose
-- WorkerManager
+🛠️ Tech Stack
+Language: Kotlin
+Architecture: MVVM
+UI: Jetpack Compose
+Media Handling: AndroidX MediaStore APIs
+Image/Video Loading: Coil
+Background Sync: WorkManager
+
+🔐 Permissions Required
+READ_MEDIA_IMAGES and READ_MEDIA_VIDEO (or READ_EXTERNAL_STORAGE for legacy)
+
+May prompt for MANAGE_EXTERNAL_STORAGE on some devices
+
+📲 Screenshots
+- Attached the App-Screenshot.jpg screenshot for reference

@@ -21,17 +21,12 @@ Allow installation from unknown sources if prompted.
 Open the app and grant media permissions to begin browsing your albums.
 
 🛠️ Tech Stack
-Language: Kotlin
-Architecture: MVVM
-UI: Jetpack Compose
-Media Handling: AndroidX MediaStore APIs
-Image/Video Loading: Coil
-Background Sync: WorkManager
-
-🔐 Permissions Required
-READ_MEDIA_IMAGES and READ_MEDIA_VIDEO (or READ_EXTERNAL_STORAGE for legacy)
-
-May prompt for MANAGE_EXTERNAL_STORAGE on some devices
-
+- Language: Kotlin
+- Architecture: MVVM
+- UI: Jetpack Compose
+- Media Handling: AndroidX MediaStore APIs
+- Image/Video Loading: Coil
+- Background Sync: WorkManager
+  
 📲 Screenshots
 - Attached the App-Screenshot.jpg screenshot for reference
